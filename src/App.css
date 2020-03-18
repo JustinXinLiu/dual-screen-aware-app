@@ -31,6 +31,12 @@ main {
   }
 }
 
+@media (spanning: single-fold-vertical) {
+  main {
+    margin: 7vw 5vw 2vw;
+  }
+}
+
 h3 {
   text-transform: uppercase;
   font-weight: 500;
@@ -45,6 +51,18 @@ mark {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
   grid-gap: 2rem;
+}
+
+@media (spanning: single-fold-vertical) and (min-width: 1114px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (spanning: single-fold-vertical) and (min-width: 1440px) {
+  .card-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 a {
